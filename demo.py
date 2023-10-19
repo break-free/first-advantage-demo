@@ -1,7 +1,7 @@
 import sys, select, time, os, subprocess, sys
 
 if "OPENAI_API_KEY" not in os.environ:
-  print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
+  print("You must set an OPENAI_API_KEY environment variable.", file=sys.stderr)
 else:
   
 
@@ -19,11 +19,10 @@ else:
     os.system('clear')
     if choice == "1":
       print("LOAD MATRIX MODE")
-      import process
-      process.train()
+      import parser
+      parser.parse()
     elif choice == "2":
       print("CONVERSATION MODE")
-      import process
-      process.runPrompt()
+      import chat
+      chat.chat()
   sys.exit()
-    

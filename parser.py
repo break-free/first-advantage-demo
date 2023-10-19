@@ -1,5 +1,6 @@
 # TODO: This whole file.
 
+
 trainingData = list(Path("training/facts/").glob("**/*.txt"))
 
   #check there is data in the trainingData folder

@@ -1,1 +1,9 @@
-# A prompt needs to be added here.
+Use the included history or your own knowledge in that order to answer the question.
+
+## History
+
+{history}
+
+## Question
+
+{question}

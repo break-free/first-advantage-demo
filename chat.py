@@ -1,35 +1,34 @@
-# TODO: This whole file.
-import ???
+from langchain.chains import LLMChain
+from langchain.llms import OpenAI
+from langchain.prompts import Prompt
 
-# Import Document Store
+def chat():
 
-index = faiss.read_index("training.index")
+  # Import Document Store
 
-  with open("faiss.pkl", "rb") as f:
-    store = pickle.load(f)
+  #TODO: Need to import from a local document store containing a representative-client matrix.
 
-  store.index = index
+  # Setup and start chat
 
-# Setup and start chat
-
-  with open("training/master.txt", "r") as f:
+  with open("master.prompt", "r") as f:
     promptTemplate = f.read()
 
-  prompt = Prompt(template=promptTemplate, input_variables=["history", "context", "question"])
+  prompt = Prompt(template=promptTemplate, input_variables=["history", "question"])
 
   llmChain = LLMChain(prompt=prompt, llm=OpenAI(temperature=0.25))
 
   def onMessage(question, history):
-    docs = store.similarity_search(question)
-    contexts = []
-    for i, doc in enumerate(docs):
-      contexts.append(f"Context {i}:\n{doc.page_content}")
-      answer = llmChain.predict(question=question, context="\n\n".join(contexts), history=history)
+    #TODO: Need to search through a document store.
+    #TODO: Need to update the `master.prompt` file with a "context" input variable.
+
+    answer = llmChain.predict(question=question, history=history)
     return answer
 
   history = []
   while True:
     question = input("Ask a question > ")
+    if question in ['exit', 'q', 'quit']:
+        break
     answer = onMessage(question, history)
     print(f"Bot: {answer}")
     history.append(f"Human: {question}")
