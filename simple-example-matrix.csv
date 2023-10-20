@@ -1,0 +1,163 @@
+Company Name / Logo,,,,
+,,,,
+,,,,
+,,,,
+account #,,,,
+PROM SI,,,,
+crim scope = ,,,,
+,,,,
+,,,,
+Sex Offender Registry,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",
+,,,"DECISIONAL 
+for residents of WI, GA",
+,,X,,
+,,,,
+,,,,
+Disposition Type,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of WI, GA",
+Less than Misdemeanor Offenses,,,,X
+Charges that can't be categorized,,X,,
+,,,,
+Criminal Charge Categories,convictions / pending / active deferrals,,,
+Civil Disobedience,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of WI, GA",
+Alcohol,,X,,not reported if charge type is 'less than misdemeanor' (infraction equivalent or non-criminal traffic)
+Animal Ordinance,X,,,
+Boating & Recreation Violations,,X,,
+Fish & Game,X,,,
+Other Civil Ordinance,,X,,
+Public Nuisance,,,X,
+Tobacco,,,X,
+Criminal Intent,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of WI, GA",
+Abuse,,X,,
+Bribery,,X,,
+Child Related,,X,,
+Civil Rights Violations,,,X,
+Conspiracy / Accessory,,X,,
+Corruption of Minor,,,X,
+Criminal Tools,,X,,
+Endangerment & Neglect,,X,,
+False Statements & Reports,,X,,
+Gambling,,,,X
+Identity Related,,X,,
+Impersonating an Officer,X,,,
+Injury,X,,,
+Juvenile / Minor Participation,X,,,
+Loiter & Prowl,,X,,
+Other Non-violent,,,X,
+Perjury & Contempt,,X,,
+Resist / Obstruct / Evade / Flee,,,,X
+Tampering - Nonviolent,,,,X
+Vehicular Assault / Injury / Death,,,,X
+Vehicular Related,X,,,
+Warrant & Probation / Appearance,X,,,
+Weapons - Nonviolent,,X,,
+Domestic Crimes,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of WI, GA",
+Child Abuse,,,X,
+Child Endangerment & Neglect,,,X,
+Domestic Custody Related,,X,,
+Domestic Violence,,X,,
+Non-support Child / Spouse,,,X,
+Judgment / Property Damage,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of WI, GA",
+Disorderly Conduct & Like,X,,,
+Disturbing the Peace,X,,,
+Other - Misconduct,X,,,
+Trespass,X,,,
+Vandalism & Property Damage,X,,,
+Security Related,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of WI, GA",
+Commercial Transportation,,X,,
+Computer Crimes,,X,,
+Hazardous Materials,,X,,
+Immigration,,X,,
+Terrorism/Terroristic Threats,,X,,
+Treason,,X,,
+Sex Crimes,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of WI, GA",
+Sex - Child Related,,,X,
+Sex - Miscellaneous,,,X,
+Sex - Offender,,,X,
+Sex - Prostitution,,,X,
+Sex - Unlawful Contact,,,X,
+Sex - Violence,,,X,
+Substance Abuse,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of WI, GA",
+Drugs - Distribution,,,X,
+Drugs - Possession,,X,,
+DUI - Alcohol & Unspecified,X,,,
+DUI - Drug Related,,X,,
+Intoxication - Alcohol & Unspecified,X,,,
+Intoxication - Drugs ,,X,,
+Marijuana - Distribution,,,X,
+Marijuana - Possession,X,,,
+Other - Drug Related,,X,,
+Theft & Burglary,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of WI, GA",
+Bad Check,,,,X
+Burglary,,,X,
+Forgery,X,,X,
+Fraud,X,,,
+Identity Theft Related,,X,,
+Receiving / Possession,X,,,
+Securities Related,X,,,
+Tax Related,,,,X
+Theft,,,,X
+Traffic,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of Ban The Box locations",
+Aggravated Traffic,,X,,
+Driving with Revoked License,,X,,
+Leaving the Scene,,X,,
+Driving without License,,X,,not reported as misdemeanor or lesser unless 'report traffic' included as Special Instruction in set-up
+Other License Related,X,,,
+Reckless Driving,,X,,
+Traffic Insurance Related,,X,,
+Traffic Moving Violation - Other,,X,,
+Traffic Moving Violation - Speed,,X,,
+Traffic - Other Traffic,,X,,
+Traffic - Pedestrian / Bicycle Related,,X,,
+Traffic Registration & Inspection,,X,,
+Traffic Seatbelt / Safety Related,,X,,
+Violence & Threats,ELIGIBLE ,DECISIONAL ,"INELIGIBLE 
+except for residents of WI, GA",Do Not Pursue / Report
+,,,"DECISIONAL 
+for residents of WI, GA",
+Animal Cruelty,,,X,
+Arson,,,X,
+Assault & Battery,,,X,
+Attempted Murder,,,X,
+Fighting,,,X,
+Hate Crimes,,,X,
+Kidnapping,,,X,
+Manslaughter,,,X,
+Murder Related,,,X,
+Other Violence,,,X,
+Robbery,,,X,
+Stalk / Harass / Threats,,,X,
+Tampering,,,X,
+Vehicular Manslaughter,,,X,
+Weapons - Criminal,,,X,
+Weapons - Use,,X,,

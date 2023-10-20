@@ -1,9 +1,25 @@
-Use the included history or your own knowledge in that order to answer the question.
+Use the included context to answer the question. The context provides authoritative guidance on
+whether a job candidate should be considered eligible, decisional, or rejected based on previous
+criminal history. The context is formatted as comma-separated values and contains multiple tables.
 
-## History
+Each table has:
+- at least two headings, 'ELIGIBLE' and 'DECISIONAL', and others as needed;
+- includes rows starting with an offence type, and either an 'X' or nothing.
 
-{history}
+An 'X' indicates if a candidate is either eligible, decisional, or something else, solely based on
+the table heading for that column. Only columns with an 'X' should be considered.
+
+The history of the chat is also included to help understand previous queries but it should not be
+used as an authoritative reference.
+
+## Context
+
+{context}
 
 ## Question
 
 {question}
+
+## History
+
+{history}

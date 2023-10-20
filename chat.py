@@ -7,33 +7,37 @@ This file can be imported as a module and contains the following functions:
 
     * chat: Loads a document store and starts a chat interface to query it.
 """
-
 from langchain.chains import LLMChain
-from langchain.llms import OpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.prompts import Prompt
 
-def chat():
+def chat(file_name: str):
   """ Load a document store and start a chat.
+
+  Parameters
+  ---
+  file_name: str
+    The name of the file.
   """
 
-  # Import Document Store
-
-  #TODO: Need to import from a local document store containing a representative-client matrix.
+  # Import document(s) for context
+  contents = ""
+  with open(file_name, "r") as f:
+    contents = f.read()
 
   # Setup and start chat
 
   with open("master.prompt", "r") as f:
     promptTemplate = f.read()
 
-  prompt = Prompt(template=promptTemplate, input_variables=["history", "question"])
+  prompt = Prompt(template=promptTemplate, input_variables=["question", "context", "history"])
 
-  llmChain = LLMChain(prompt=prompt, llm=OpenAI(temperature=0.25))
+  llmChain = LLMChain(prompt=prompt, llm=ChatOpenAI(temperature=0.1, model_name="gpt-4"))
 
   def onMessage(question, history):
-    #TODO: Need to search through a document store.
     #TODO: Need to update the `master.prompt` file with a "context" input variable.
 
-    answer = llmChain.predict(question=question, history=history)
+    answer = llmChain.predict(question=question, context=contents, history=history)
     return answer
 
   history = []

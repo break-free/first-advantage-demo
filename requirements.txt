@@ -2,7 +2,9 @@ langchain
 networkx
 nltk
 openai
+openpyxl
 pandas
 python-lsp-server
+tiktoken
 unstructured
 xlrd
