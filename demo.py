@@ -20,7 +20,7 @@ else:
     if choice == "1":
       print("LOAD MATRIX MODE")
       import parser
-      parser.parse()
+      parser.parse("simple-example-matrix.xls")
     elif choice == "2":
       print("CONVERSATION MODE")
       import chat

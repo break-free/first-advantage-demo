@@ -1,7 +1,44 @@
+"""Parser Functions
+
+Contains functions for creating and manipulating a document store using First Advantage client
+matrices.
+
+This file can be imported as a module and contains the following functions:
+
+    * parse: accepts a Microsoft Excel file and returns a document store.
+"""
+
+from langchain.document_loaders import UnstructuredExcelLoader
+
 # TODO: Update this function to parse a Microsoft Excel file using an available document
 #       loader.
-def parse():
-  print("Parse some data ... eventually. TODO!")
+def parse(file_name: str):
+  """ Returns a document store from a Microsoft Excel file.
+
+  Parameters:
+  ---
+  file_name: str
+    File name of the Excel file.
+
+  Returns:
+  ---
+  ???
+  """
+  print("Parsing Excel file ...")
+
+  docs = []
+
+  with open(file_name, "r"):
+    loader = UnstructuredExcelLoader(file_name, mode="elements")
+    docs = loader.load()
+
+  print(f"No. of document: {len(docs)}")
+  count = 0
+  while count < len(docs):
+    print(f"\n\nDocument no. {count}\n\n{docs[count]}")
+    count += 20
+
+  print("Parsing complete!")
 
 
 # trainingData = list(Path("training/facts/").glob("**/*.txt"))

@@ -1,3 +1,8 @@
 langchain
+networkx
+nltk
 openai
+pandas
 python-lsp-server
+unstructured
+xlrd
