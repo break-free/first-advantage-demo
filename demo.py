@@ -1,4 +1,13 @@
-import sys, select, time, os, subprocess, sys
+"""First Advantage Demonstration script
+
+Runs the demonstration for First Advantage (to be used during the workshop).
+"""
+
+import os
+import select
+import subprocess
+import sys
+import time
 
 _file_name = "simple-example-matrix.csv"
 
@@ -8,7 +17,7 @@ else:
   print("== First Advantage Demonstration ==")
   print ("You have five seconds to select an option")
   print()
-  print("1: File statistics\n2: Talk to your Bot\n> ", end="")
+  print("1: File statistics\n2: Query the client matrix via chat\n> ", end="")
   
   i, o, e = select.select( [sys.stdin], [], [], 10 )
   print()
