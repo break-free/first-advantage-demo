@@ -13,6 +13,7 @@ Setup and activate a Python virtual environment:
 
     pip -m venv .venv-first-advantage-demo
     source .venv-first-advantage-demo/bin/activate
+    pip install -r requirements.txt
 
 Run the demonstration:
 
