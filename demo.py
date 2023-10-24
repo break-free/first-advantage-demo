@@ -19,13 +19,24 @@ else:
   print()
   print("1: File statistics\n2: Query the client matrix via chat\n> ", end="")
   
-  i, o, e = select.select( [sys.stdin], [], [], 10 )
+  # var to account for clear vs cls depending on the OS; defaults to Unix-like clear 
+  clearCommand = "clear"
+
+  if sys.platform == 'win32':
+      # windows does not support select() for anything except sockets
+      # https://docs.python.org/3.11/library/select.html
+      i = sys.stdin
+      o = []
+      e = []
+      clearCommand = "cls"
+  else:
+    i, o, e = select.select( [sys.stdin], [], [], 10 )
   print()
   
   if (i):
     choice = sys.stdin.readline().strip()
     time.sleep(0.5)
-    os.system('clear')
+    os.system(clearCommand)
     if choice == "1":
       print("FILE STATISTICS")
       import parser
