@@ -13,6 +13,8 @@ of any decisions.
 The history of the chat is also included to help understand previous queries but it should not be
 used as an authoritative reference.
 
+Respond only with the result (e.g., eligible) and no explanation
+
 ## Context
 
 {context}
