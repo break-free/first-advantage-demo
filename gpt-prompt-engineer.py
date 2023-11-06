@@ -16,10 +16,10 @@ def generate_candidate_prompts(description, test_cases, context,
         messages=[
             {
                 "role": "system",
-                "content": f"Your job is to generate system prompts for GPT-4, given a description of the use-case and some test cases.\n\nThe prompts you will be generating will be determining the answers to a series of questions. The answer permitted for each question must be one of the following: {expected_results} .\n\nIn your generated prompt, you should describe how the AI should behave in plain English. Include what it will see, and what it's allowed to output. Be creative in with prompts to get the best possible results. The AI knows it's an AI -- you don't need to tell it this.\n\nYou will be graded based on the performance of your prompt... but don't cheat! You cannot include specifics about the test cases in your prompt. Any prompts with examples will be disqualified.\n\nMost importantly, output NOTHING but the prompt. Do not include anything else in your message."},
+                "content": f"Your job is to generate system prompts for GPT-4, given a description of the use-case and some test cases.\n\nThe prompts you will be generating will be determining the answers to a series of questions.\n\nIn your generated prompt, you should describe how the AI should behave in plain English. Include what it will see, and what it's allowed to output. Be creative in with prompts to get the best possible answers. The answer permitted for each question must be one of the following: {expected_results}.\n\nThe AI knows it's an AI -- you don't need to tell it this.\n\nYou will be graded based on the performance of your prompt... but don't cheat! You cannot include specifics about the test cases in your prompt. Any prompts with examples will be disqualified.\n\nMost importantly, output NOTHING but the prompt. Do not include anything else in your message."},
             {
                 "role": "user",
-                "content": f"Here is the description of the use-case:\n\n`{description.strip()}`\n\nHere are some test cases:\n\n`{test_cases}`\n\nHere is the employers eligibility matrix (provided as comma separated values):\n\n`{context}`\n\nRespond with your prompt, and nothing else. Be creative."
+                "content": f"Here is the description of the use-case:\n\n`{description.strip()}`\n\nHere is the employers eligibility matrix (provided as comma separated values) that must be included in your generated prompt (for reference):\n\n`{context}`\n\nHere are some test cases:\n\n`{test_cases}`\n\nRespond with your prompt, and nothing else. Be creative."
             }
             ],
         temperature=.9,
@@ -74,7 +74,7 @@ def test_candidate_prompts(test_cases, prompts):
         table.add_row(row)
         count_test_case = count_test_case + 1
         # add delay to prevent time-outs
-        time.sleep(30)
+        time.sleep(40)
 
     print(table)
 
@@ -93,9 +93,9 @@ def test_candidate_prompts(test_cases, prompts):
     print(f"The best prompt was '{best_prompt}' with a correctness of {best_percentage:.2f}%.")
 
 # describe the classification task clearly
-description = "Decide if an applicant is eligible using an employers eligibility matrix."
+description = "Decide if a potential employee is eligible using an employer's eligibility matrix. The employer's eligibility matrix consists of at least one table, where the first column is a list of offences. The first row of each table (i.e., the headings) are possible eligibility statuses. A non-empty square in the table, i.e., an 'X', indicates that if a potential employee has this type of offence in their record, then the first row or heading is their eligibility status. Note that their is only one non-empty column in a row, except if that row is a heading or contains additional data for consideration."
 # choose how many prompts you want to generate and test
-number_of_prompts = 1
+number_of_prompts = 5
 
 with open('test_cases.json') as f_test_cases:
     file_test_cases = json.load(f_test_cases)
