@@ -8,9 +8,13 @@ import select
 import subprocess
 import sys
 import time
+import AzureBlobUtil
 
-#_file_name = "super-complex-example-matrix.csv"
-_file_name = "simple-example-matrix.csv"
+_BLOB_FILE_NAME = "simple-example-matrix.csv"
+_CONTAINER_NAME = "fa-test-container"
+_AZURE_UTIL_INSTANCE = AzureBlobUtil.AzureBlobUtil()
+# the below function pulls the file from blob storage on azure and writes it locally for loading and use
+AzureBlobUtil.getFileFromBlob(_AZURE_UTIL_INSTANCE, _CONTAINER_NAME, _BLOB_FILE_NAME)
 
 if "OPENAI_API_KEY" not in os.environ:
   print("You must set an OPENAI_API_KEY environment variable.", file=sys.stderr)
@@ -42,13 +46,14 @@ else:
     if choice == "1":
       print("FILE STATISTICS")
       import parser
-      parser.statistics(file_name=_file_name, raw=True)
+      parser.statistics(file_name=_BLOB_FILE_NAME, raw=True)
     elif choice == "2":
       print("CONVERSATION MODE")
       import chat
-      chat.chat(_file_name)
+      chat.chat(_BLOB_FILE_NAME)
     elif choice == "3":
       print("TESTING MODE")
       import test
-      test.test_single_file(_file_name)
+      test.test_single_file(_BLOB_FILE_NAME)
+      
   sys.exit()
