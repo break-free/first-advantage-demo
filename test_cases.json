@@ -1,0 +1,75 @@
+{
+    "client matrix": "simple-example-matrix.csv",
+    "adjudication test cases": [
+        {
+            "charge category": "Alcohol",
+            "charge level": "felony",
+            "state": "Wisconsin",
+            "date": "Nov 6, 2019",
+            "result": "DECISIONAL"
+        },
+        {
+            "charge category": "Public Nuisance",
+            "charge level": "misdemeanor",
+            "state": "Wisconsin",
+            "date": "Nov 6, 2019",
+            "result": "DECISIONAL"
+        },
+        {
+            "charge category": "Injury",
+            "charge level": "felony",
+            "state": "Wisconsin",
+            "date": "Nov 6, 2019",
+            "result": "ELIGIBLE"
+        },
+        {
+            "charge category": "Child Endangerment",
+            "charge level": "felony",
+            "state": "Wisconsin",
+            "date": "Nov 6, 2019",
+            "result": "DECISIONAL"
+        },
+        {
+            "charge category": "Gambling",
+            "charge level": "misdemeanor",
+            "state": "Wisconsin",
+            "date": "Nov 6, 2019",
+            "result": "DO NOT PURSUE OR REPORT"
+        },
+        {
+            "charge category": "Alcohol",
+            "charge level": "felony",
+            "state": "New York",
+            "date": "Nov 6, 2019",
+            "result": "DECISIONAL"
+        },
+        {
+            "charge category": "Public Nuisance",
+            "charge level": "misdemeanor",
+            "state": "New York",
+            "date": "Nov 6, 2019",
+            "result": "INELIGIBLE"
+        },
+        {
+            "charge category": "Injury",
+            "charge level": "felony",
+            "state": "New York",
+            "date": "Nov 6, 2019",
+            "result": "ELIGIBLE"
+        },
+        {
+            "charge category": "Child Endangerment",
+            "charge level": "felony",
+            "state": "New York",
+            "date": "Nov 6, 2019",
+            "result": "INELIGIBLE"
+        },
+        {
+            "charge category": "Gambling",
+            "charge level": "misdemeanor",
+            "state": "New York",
+            "date": "Nov 6, 2019",
+            "result": "DO NOT PURSUE OR REPORT"
+        }
+    ]
+}

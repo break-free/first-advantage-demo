@@ -4,6 +4,7 @@ nltk
 openai
 openpyxl
 pandas
+prettytable
 python-lsp-server
 tiktoken
 unstructured
