@@ -1,7 +1,7 @@
 langchain
 networkx
 nltk
-openai
+openai==0.28.1
 openpyxl
 pandas
 python-lsp-server
