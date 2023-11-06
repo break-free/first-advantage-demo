@@ -22,7 +22,8 @@ else:
   print("== First Advantage Demonstration ==")
   print ("You have five seconds to select an option")
   print()
-  print("1: File statistics\n2: Query the client matrix via chat\n> ", end="")
+  print("""1: File statistics\n2: Query the client matrix via chat\n3: Run tests\n>"""
+    , end="")
   
   # var to account for clear vs cls depending on the OS; defaults to Unix-like clear 
   clearCommand = "clear"
@@ -50,4 +51,9 @@ else:
       print("CONVERSATION MODE")
       import chat
       chat.chat(_BLOB_FILE_NAME)
+    elif choice == "3":
+      print("TESTING MODE")
+      import test
+      test.test_single_file(_BLOB_FILE_NAME)
+      
   sys.exit()
